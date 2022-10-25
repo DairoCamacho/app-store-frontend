@@ -7,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonComponent implements OnInit {
 
-  constructor() { }
+  public name: string;
 
+  constructor() {
+    this.name = ""
+   }
+
+  send() {
+    alert("el nombre digitado es: " + this.name)
+  }
   ngOnInit(): void {
   }
 

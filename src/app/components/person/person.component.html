@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div id="col1" class="col-12 col-md-2"></div>
+    <div id="col2" class="col-12 col-md-8">
+      <h4>Persons List</h4>
+      <form>
+        <br />
+        <div class="form-group">
+          <!-- <label for="formGroupExampleInput">Name</label> -->
+          <input type="text" class="form-control" id="name" placeholder="Name" minlength="3" maxlength="50" />
+        </div>
+        <br />
+        <div class="form-group">
+          <!-- <label for="formGroupExampleInput2">Last name</label> -->
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Last name" minlength="3"
+            maxlength="50" />
+        </div>
+        <br />
+        <div class="form-group">
+          <button type="button" class="btn btn-primary mb-4" (click)="send()">
+            Add
+          </button>
+        </div>
+      </form>
+    </div>
+    <div id="col3" class="col-12 col-md-2"></div>
+  </div>
+</div>

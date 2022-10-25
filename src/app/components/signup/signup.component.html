@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div id="col1" class="col-12 col-md-4"></div>
+    <div id="col2" class="col-12 col-md-4">
+      <br>
+      <h4>{{ tittle }}</h4>
+      <form>
+        <br>
+        <div class="form-group">
+          <!-- <label for="exampleInputText1">Text</label> -->
+          <input type="text" class="form-control" id="userName" [(ngModel)]="userName" name="userName" placeholder="User name"
+            >
+        </div>
+        <br>
+        <div class="form-group">
+          <!-- <label for="email">Email address</label> -->
+          <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" aria-describedby="emailHelp"
+            placeholder="Email" autocomplete="on">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <br>
+        <div class="form-group">
+          <!-- <label for="password">Password</label> -->
+          <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" placeholder="Password">
+        </div>
+        <br>
+        <button type="button" class="btn btn-primary" (click)="createAccount()">Create account</button>
+      </form>
+    </div>
+    <div id="col3" class="col-12 col-md-4"></div>
+  </div>
+</div>

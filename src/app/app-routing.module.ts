@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { OrderComponent } from './order/order.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { PersonComponent } from './person/person.component';
-import { ProductComponent } from './product/product.component';
+import { HomeComponent } from './components/home/home.component';
+import { OrderComponent } from './components/order/order.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { PersonComponent } from './components/person/person.component';
+import { ProductComponent } from './components/product/product.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 const routes: Routes = [
-  { path: 'person', component: PersonComponent },
-  { path: 'product', component: ProductComponent },
-  { path: 'order', component: OrderComponent },
   { path: '', component: HomeComponent },
-  // { path : 'salir', redirectTo: '/home', pathMatch: 'full' }, 
-  // redirectTo: se usa para cuando usa servicios externos donde recibes algo (url) y lo redireccionas a una pagina
+  { path: 'person', component: PersonComponent },
+  { path: 'order', component: OrderComponent },
+  { path: 'product', component: ProductComponent },
+  { path: 'signup', component: SignupComponent },
   { path: '**', component: PageNotFoundComponent },
+  // { path : 'salir', redirectTo: '/home', pathMatch: 'full' },
+  // redirectTo: se usa para cuando usa servicios externos donde recibes algo (url) y lo redireccionas a una pagina
 ];
 
 @NgModule({
