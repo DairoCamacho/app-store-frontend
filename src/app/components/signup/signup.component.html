@@ -7,25 +7,104 @@
       <form>
         <br>
         <div class="form-group">
-          <!-- <label for="exampleInputText1">Text</label> -->
-          <input type="text" class="form-control" id="userName" [(ngModel)]="userName" name="userName" placeholder="User name"
-            >
+          <!-- <label class="form-label" for="formUser.username">Username</label> -->
+          <input type="text" class="form-control" id="username" [(ngModel)]="formUser.username" name="formUser.username"
+            placeholder="Username">
         </div>
         <br>
         <div class="form-group">
-          <!-- <label for="email">Email address</label> -->
-          <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" aria-describedby="emailHelp"
-            placeholder="Email" autocomplete="on">
+          <!-- <label class="form-label" for="formUser.email">Email address</label> -->
+          <input type="email" class="form-control" id="email" [(ngModel)]="formUser.email" name="formUser.email"
+            aria-describedby="emailHelp" placeholder="Email" autocomplete="on">
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <br>
         <div class="form-group">
-          <!-- <label for="password">Password</label> -->
-          <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" placeholder="Password">
+          <!-- <label class="form-label" for="formUser.password">Password</label> -->
+          <input type="password" class="form-control" id="password" [(ngModel)]="formUser.password" name="formUser.password"
+            placeholder="Password">
         </div>
         <br>
-        <button type="button" class="btn btn-primary" (click)="createAccount()">Create account</button>
+        <button type="button" class="btn btn-primary" (click)="createAccount()">Sign up</button>
       </form>
+    </div>
+    <div id="col3" class="col-12 col-md-4"></div>
+  </div>
+</div>
+
+<br>
+<hr>
+
+<div class="container">
+  <div class="row">
+    <div id="col1" class="col-12 col-md-4"></div>
+    <div id="col2" class="col-12 col-md-4">
+      <br>
+      <h4>{{ tittle }}</h4>
+
+      <form>
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="row mb-4">
+
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="form3Example1" class="form-control" />
+              <label class="form-label" for="form3Example1">First name</label>
+            </div>
+          </div>
+          
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="form3Example2" class="form-control" />
+              <label class="form-label" for="form3Example2">Last name</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="form3Example3" class="form-control" />
+          <label class="form-label" for="form3Example3">Email address</label>
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="form3Example4" class="form-control" />
+          <label class="form-label" for="form3Example4">Password</label>
+        </div>
+
+        <!-- Checkbox -->
+        <div class="form-check d-flex justify-content-center mb-4">
+          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+          <label class="form-check-label" for="form2Example33">
+            Subscribe to our newsletter
+          </label>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">Sign up</button>
+
+        <!-- Register buttons -->
+        <div class="text-center">
+          <p>or sign up with:</p>
+          <button type="button" class="btn btn-primary btn-floating mx-1">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+
+          <button type="button" class="btn btn-primary btn-floating mx-1">
+            <i class="fab fa-google"></i>
+          </button>
+
+          <button type="button" class="btn btn-primary btn-floating mx-1">
+            <i class="fab fa-twitter"></i>
+          </button>
+
+          <button type="button" class="btn btn-primary btn-floating mx-1">
+            <i class="fab fa-github"></i>
+          </button>
+        </div>
+      </form>
+
     </div>
     <div id="col3" class="col-12 col-md-4"></div>
   </div>

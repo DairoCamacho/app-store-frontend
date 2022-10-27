@@ -1,22 +1,37 @@
 import { Component, OnInit } from '@angular/core';
+import { UserModel } from 'src/app/models/UserModel';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
+  styleUrls: ['./user.component.scss'],
 })
 export class UserComponent implements OnInit {
 
-  public name: string;
+  // this is needed for ngModel on form fields
+  formUser = new UserModel();
 
-  constructor() {
-    this.name = ""
-   }
+  // this is needed to create the user list table
+  userList = new Array<UserModel>();
 
-  send() {
-    alert("el nombre digitado es: " + this.name)
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  add() {
+    let user = new UserModel();
+
+    user.id = this.formUser.id;
+    user.name = this.formUser.name;
+    user.lastName = this.formUser.lastName;
+    user.phoneNumber = this.formUser.phoneNumber;
+    user.username = this.formUser.username;
+    user.email = this.formUser.email;
+    user.password = this.formUser.password;
+
+    this.userList.push(user);
+
+    console.log(this.formUser);
+    alert('Created user: ' + user.name);
   }
-  ngOnInit(): void {
-  }
-
 }

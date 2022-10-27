@@ -11,40 +11,30 @@ export class SignupComponent implements OnInit {
   tittle: string;
 
   // ngModel example
-  userName: string;
-  email: string;
-  password: string;
-  user = new UserModel();
+  formUser = new UserModel();
 
   constructor() {
     // interpolation example
     this.tittle = 'Create an Account';
-
-    // ngModel
-    this.userName = '';
-    this.email = '';
-    this.password = '';
   }
 
   createAccount() {
+
+    let user = new UserModel();
     // validate
-    if (this.userName.length == 0 || this.userName.trim() == '') {
+    if (this.formUser.username.length == 0 || this.formUser.username.trim() == '') {
       alert('username cannot be empty');
       return;
     }
 
-    if (this.email.length == 0 || this.email.trim() == '') {
+    if (this.formUser.email.length == 0 || this.formUser.email.trim() == '') {
       alert('email cannot be empty');
       return;
     }
 
-
-    this.user.userName = this.userName;
-    this.user.email = this.email;
-    this.user.password = this.password;
-
-    console.log(this.user); // para ver cómo se comporta
-    alert(this.user); // para ver cómo se comporta
+    user.username = this.formUser.username;
+    user.email = this.formUser.email;
+    user.password = this.formUser.password;
   }
 
   ngOnInit(): void {}
