@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserModel } from 'src/app/models/UserModel';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-user',
@@ -14,9 +15,14 @@ export class UserComponent implements OnInit {
   // this is needed to create the user list table
   userList = new Array<UserModel>();
 
-  constructor() {}
+  constructor( private userService : UserService ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    this.userService.getUsersAll().subscribe( data => {
+      this.userList = Object.values(data);
+    })
+  }
 
   add() {
     let user = new UserModel();
