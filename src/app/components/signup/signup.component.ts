@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserModel } from 'src/app/models/PersonModel';
+import { PersonModel } from 'src/app/models/PersonModel';
 
 @Component({
   selector: 'app-signup',
@@ -11,7 +11,7 @@ export class SignupComponent implements OnInit {
   tittle: string;
 
   // ngModel example
-  formUser = new UserModel();
+  formPerson = new PersonModel();
 
   constructor() {
     // interpolation example
@@ -20,21 +20,15 @@ export class SignupComponent implements OnInit {
 
   createAccount() {
 
-    let user = new UserModel();
+    let person = new PersonModel();
     // validate
-    if (this.formUser.username.length == 0 || this.formUser.username.trim() == '') {
-      alert('username cannot be empty');
-      return;
-    }
-
-    if (this.formUser.email.length == 0 || this.formUser.email.trim() == '') {
+    if (this.formPerson.email.length == 0 || this.formPerson.email.trim() == '') {
       alert('email cannot be empty');
       return;
     }
 
-    user.username = this.formUser.username;
-    user.email = this.formUser.email;
-    user.password = this.formUser.password;
+    person.email = this.formPerson.email;
+    person.password = this.formPerson.password;
   }
 
   ngOnInit(): void {}
