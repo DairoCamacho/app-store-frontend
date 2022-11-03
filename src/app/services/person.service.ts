@@ -1,21 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { UserModel } from '../models/UserModel';
+import { PersonModel } from '../models/PersonModel';
 
 @Injectable({
   providedIn: 'root',
 })
-export class UserService {
-  url = 'http://localhost:3000/users';
+export class PersonService {
+  url = 'http://localhost:3000/persons';
 
   constructor(private http: HttpClient) { }
 
-getUsersAll() {
+getPersonsAll() {
   return this.http.get(this.url);
 }
 
-createUser( user : UserModel ){
-  return this.http.post(this.url, user)
+createPerson( person : PersonModel ){
+  return this.http.post(this.url, person)
 }
 
 }
