@@ -6,22 +6,18 @@
       <h4>{{ tittle }}</h4>
       <form>
         <br>
-        <div class="form-group">
-          <!-- <label class="form-label" for="formUser.username">Username</label> -->
-          <input type="text" class="form-control" id="username" [(ngModel)]="formUser.username" name="formUser.username"
-            placeholder="Username">
-        </div>
+
         <br>
         <div class="form-group">
-          <!-- <label class="form-label" for="formUser.email">Email address</label> -->
-          <input type="email" class="form-control" id="email" [(ngModel)]="formUser.email" name="formUser.email"
+          <!-- <label class="form-label" for="formPerson.email">Email address</label> -->
+          <input type="email" class="form-control" id="email" [(ngModel)]="formPerson.email" name="formPerson.email"
             aria-describedby="emailHelp" placeholder="Email" autocomplete="on">
           <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <br>
         <div class="form-group">
-          <!-- <label class="form-label" for="formUser.password">Password</label> -->
-          <input type="password" class="form-control" id="password" [(ngModel)]="formUser.password" name="formUser.password"
+          <!-- <label class="form-label" for="formPerson.password">Password</label> -->
+          <input type="password" class="form-control" id="password" [(ngModel)]="formPerson.password" name="formPerson.password"
             placeholder="Password">
         </div>
         <br>
