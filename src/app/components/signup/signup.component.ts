@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserModel } from 'src/app/models/UserModel';
+import { UserModel } from 'src/app/models/PersonModel';
 
 @Component({
   selector: 'app-signup',
